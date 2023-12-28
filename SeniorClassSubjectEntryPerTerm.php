@@ -1,6 +1,5 @@
 <?php
-include ('functions.php');
-include ('jp2_db_connect.php');
+
 //$session = $_POST['session'];
 //$term = $_POST['term'];
 
