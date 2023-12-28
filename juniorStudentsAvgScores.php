@@ -1,6 +1,5 @@
 <?php
-include('functions.php');
-include ('jp2_db_connect.php');
+
 $sessions = "2021_2022";
 foreach ($_POST as $key => $value)
 $$key = $value;
