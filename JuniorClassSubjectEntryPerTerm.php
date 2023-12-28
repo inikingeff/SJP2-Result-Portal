@@ -1,6 +1,5 @@
 <?php
-include ('functions.php');
-include ('jp2_db_connect.php');
+
 //RETRIEVE SESSION AND TERM FROM FORM
 
 
