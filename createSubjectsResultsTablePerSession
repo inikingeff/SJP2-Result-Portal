@@ -1,0 +1,33 @@
+<?php
+session_start();
+
+$sessions = "2023_2024";
+
+//CREATE SUBJECT RESULT TABLE FOR JUNIOR SUBJECTS
+$jSubjects_Q = "SELECT SUBJECT_NAME FROM SUBJECTS WHERE SECTION = 'JUNIOR' ORDER BY SUBJECT_NAME";
+$jSubjectsQR = mysqli_query($conn, $jSubjects_Q);
+
+while($jSubjectRow = mysqli_fetch_array($jSubjectsQR))
+{
+$jSubject = $jSubjectRow['SUBJECT_NAME'];
+$jSubjectT = str_replace(' ', '_', $jSubject);
+$jSubject_table_name = $jSubjectT."_J_"."_".$sessions;
+$create_jTable_query = "CREATE TABLE $jSubject_table_name ( STUDENTS_ID INT(6), CLASS_NAME VARCHAR(30) NOT NULL, TERM_NAME VARCHAR(30) NOT NULL, CLASSWORK DECIMAL(10,2) NULL, ASSIGNMENT DECIMAL(10,2) NULL, TEST_ONE DECIMAL (10,2) NULL, TEST_TWO DECIMAL(10,2) NULL, EXAMINATION DECIMAL (10,2) NULL, COMMENT TEXT NULL, DATE_TIME INT(30) NULL, USERNAME VARCHAR(30) NULL)";
+mysqli_query($conn,$create_jTable_query);
+}
+
+
+
+//CREATE SUBJECT RESULT TABLE FOR SENIOR SUBJECTS
+$sSubjects_Q = "SELECT SUBJECT_NAME FROM SUBJECTS WHERE SECTION = 'SENIOR' ORDER BY SUBJECT_NAME";
+$sSubjectsQR = mysqli_query($conn, $sSubjects_Q);
+
+while($sSubjectRow = mysqli_fetch_array($sSubjectsQR))
+{
+$sSubject = $sSubjectRow['SUBJECT_NAME'];
+$sSubjectT = str_replace(' ', '_', $sSubject);
+$sSubject_table_name = $sSubjectT."_S_"."_".$sessions;
+$create_sTable_query = "CREATE TABLE $sSubject_table_name ( STUDENTS_ID INT(6), CLASS_NAME VARCHAR(30) NOT NULL, TERM_NAME VARCHAR(30) NOT NULL, CLASSWORK DECIMAL(10,2) NULL, ASSIGNMENT DECIMAL(10,2) NULL, TEST_ONE DECIMAL (10,2) NULL, TEST_TWO DECIMAL(10,2) NULL, EXAMINATION DECIMAL (10,2) NULL, COMMENT TEXT NULL, DATE_TIME INT(30) NULL, USERNAME VARCHAR(30) NULL)";
+mysqli_query($conn,$create_sTable_query);
+}
+?>
