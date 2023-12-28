@@ -1,7 +1,6 @@
 <?php
 
-//include('functions.php');
-include ('jp2_db_connect.php');
+
 
 //$subject = str_replace(" ", "_", $subjects);
 //$subject_table = $subject."_".$sessions;
