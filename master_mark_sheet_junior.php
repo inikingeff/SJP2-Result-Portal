@@ -3,8 +3,7 @@ require_once 'dompdf/autoload.inc.php';
  
 // Reference the Dompdf namespace 
 use Dompdf\Dompdf;
-include('functions.php');
-include ('jp2_db_connect.php');
+
 session_start();
 foreach ($_POST as $key => $value)
 $$key = $value;
