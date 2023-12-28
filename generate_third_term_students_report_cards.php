@@ -16,8 +16,7 @@ table th {
 </style>';
 //foreach ($_POST as $key => $value)
 //$$key = $value;
-include('functions.php');
-include ('jp2_db_connect.php');
+
   $studentsQ = getStudentsInGivenClass($classes, $sessions);
   $register = "STUDENTS_REGISTER_".$sessions;
   $resultTableJ = "JUNIOR_SCHOOL_RESULTS"."_".$sessions;
