@@ -15,8 +15,7 @@ table th {
 
 </style>';
 
-include('functions.php');
-include ('jp2_db_connect.php');
+
   $studentsQ = getStudentsInGivenClass($classes, $sessions);
   $register = "STUDENTS_REGISTER_".$sessions;
   //include("classResult.php");
