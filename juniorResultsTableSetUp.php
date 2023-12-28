@@ -1,7 +1,6 @@
 <?php
 // THIS FILE IS RUN EVERY TERM TO ADD STUDENTS TO EACH OF THE SUBJECT RESULTS TABLE
-include ('functions.php');
-include ('jp2_db_connect.php');
+
 //RETRIEVE SESSION AND TERM FROM FORM
 
 
