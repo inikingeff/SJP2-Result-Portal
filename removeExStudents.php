@@ -1,6 +1,5 @@
 <?php
-include('functions.php');
-include ('jp2_db_connect.php');
+
 $juniorSubjects = getJuniorSubjects ();
 $class_arm = "J";
 $sessions = "2021_2022";
